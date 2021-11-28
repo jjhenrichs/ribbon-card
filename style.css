@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+.container {
+    background: #ddd;
+    height: 100%;
+}
+
+.card {
+    background: #fff;
+    height: 500px;
+    width: 350px;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 25px 50px rgba(0,0,0, .15);
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+.ribbon {
+    top: -10px;
+    left: -10px;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background: red; */
+}
+
+.ribbon::before {
+    content: 'Ribbon Text';
+    width: 150%;
+    height: 40px;
+    position: absolute;
+    background: #62baea;
+    transform: rotate(-45deg) translateY(-20px);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.ribbon::after {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: #4a98bf;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 140px -140px 0 #4a98bf;
+    /* ribbon width: 150px - shadow width: 10px = 140px */
+}
